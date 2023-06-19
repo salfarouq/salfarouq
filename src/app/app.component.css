@@ -1,0 +1,26 @@
+mat-toolbar-row{
+    background-color: blue;
+    color:white;
+}
+mat-sidenav-container{
+    height:calc(205vh - 115vh);
+}
+mat-sidenav{
+    width:200px;
+    background-color:lightblue;
+}
+
+mat-sidenav button a{
+    display:block;
+    text-decoration:none;
+}
+mat-list:hover{
+    background-color: blue;
+    color:white;
+}
+mat-list-item{
+    display:block;
+}
+a{
+    text-decoration:none;
+}

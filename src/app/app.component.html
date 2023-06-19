@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+        <button mat-button>
+            <mat-icon>home</mat-icon>
+            <a router-link="Home">Home</a>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="push">
+       Menu
+    <mat-list>
+        <mat-list-item>
+            <a routerLink="Dashboard"><mat-icon>home</mat-icon>Home</a>
+        </mat-list-item>
+    </mat-list>  
+    <mat-list>
+        <mat-list-item>
+            <a routerLink="/wanafunzi"><mat-icon>person</mat-icon>Wanafunzi</a>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+            <a routerLink="/walimu"><mat-icon>people</mat-icon>Walimu</a>
+        </mat-list-item>
+     </mat-list>
+     </mat-sidenav>
+    <mat-sidenav-content>
+        
+           <router-outlet></router-outlet>
+    </mat-sidenav-content>
+        
+</mat-sidenav-container>
+
+
+
+

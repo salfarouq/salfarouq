@@ -1,0 +1,49 @@
+
+<div>
+  <img sizes="345px" classs="mylogo" alt="logo">
+</div>
+<div class="container custom-container-2">
+  <button class="btn btn-outline-primary" routerLink="app-mwanafunzi-create" (click)="Opendialog()">
+    Add mwanafunzi
+  </button>
+    <!-- Show it when there is no mwanafunzi -->
+    <div class="no-data text-center" *ngIf="mwanafunzi.length == 0">
+      <p>There is no mwanafunzi added yet!</p>
+      <button class="btn btn-outline-primary" routerLink="app-mwanafunzi-create" (click)="Opendialog()">
+        Add mwanafunzi
+      </button>
+    </div>
+    <!-- mwanafunzis list table, it hides when there is no mwanafunzi -->
+    <div *ngIf="mwanafunzi.length !== 0">
+      <h3 class="mb-3 text-center">Orodha ya wanafunzi</h3>
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">User Id</th>
+              <th scope="col">Jina</th>
+              <th scope="col">Madrassa</th>
+              <th scope="col">Anaposhi</th>
+              <th scope="col">Namba ya simu</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mwanafunzi of mwanafunzi">
+              <td>{{ mwanafunzi.id }}</td>
+              <td>{{ mwanafunzi.fname }}</td>
+              <td>{{ mwanafunzi.madrassa}}</td>
+              <td>{{ mwanafunzi.address }}</td>
+              <td>{{ mwanafunzi.phoneNo}}</td>
+              <td>
+                <span class="edit" routerLink="/mwanafunzi-edit/{{ mwanafunzi.id }}"
+                  (click)="Opendialog1()"><mat-icon>edit</mat-icon></span>
+                <span class="delete" (click)="deletemwanafunzi(mwanafunzi.id)">
+                  <mat-icon>delete</mat-icon></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

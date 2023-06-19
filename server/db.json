@@ -1,0 +1,83 @@
+{
+  "wanfunzi": [
+    {
+      "fname": "Idrissa Hamid Salim",
+      "madrassa": "Swaabirina B",
+      "address": "Magogoni",
+      "phoneNo": "0777956876",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "fname": "Ahmad Rashid Ahmad",
+      "madrassa": "Almadrasatul-Nurulhudaa",
+      "phoneNo": "07744457658",
+      "address": "Magogoni mkarafuuni"
+    },
+    {
+      "fname": "Ahmad Mohammad Said",
+      "madrassa": "NurulMutaqina",
+      "address": "Magogoni",
+      "phoneNo": "0777909876",
+      "id": 3
+    },
+    {
+      "fname": "Salum Mohammad Said",
+      "madrassa": "Nurul Mutaqina",
+      "address": "Magogoni",
+      "phoneNo": "0777909876",
+      "id": 4
+    },
+    {
+      "fname": "Mudathi Salum Ali",
+      "madrassa": "Imaaniyyah",
+      "address": "Bububu",
+      "phoneNo": "077879495",
+      "id": 5
+    },
+    {
+      "fname": "Samir Seif ",
+      "madrassa": "Almadrasatul Istiqaama",
+      "address": "Jitimai",
+      "phoneNo": "078987643",
+      "id": 6
+    },
+    {
+      "fname": "Halima Ibrahim Yussuf",
+      "madrassa": "Almadrasatul Swabirina A",
+      "address": "Magogoni",
+      "phoneNo": "0879654345",
+      "id": 7
+    }
+  ],
+  "walimu": [
+    {
+      "id": 1,
+      "fname": "Abubakar Masoud Ghulam",
+      "madrassa": "Almadrasatul Swaabirina",
+      "address": "Magogoni",
+      "phoneNo": "0773786532"
+    },
+    {
+      "id": 2,
+      "fname": "Simai Haji Uzia",
+      "madrassa": "Almadrasatul Nuurul yaqin",
+      "address": "Amani",
+      "phoneNo": "0773457832"
+    },
+    {
+      "id": 3,
+      "fname": "Alhaji Ali Hamid",
+      "madrassa": "Almadrasatul Swaabirina B",
+      "address": "Magogoni",
+      "phoneNo": "0773456889"
+    },
+    {
+      "id": 4,
+      "fname": "Khalid Hassan Rashid",
+      "madrassa": "Almadrasatul Qamaria",
+      "address": "Daraja Bovu",
+      "phoneNo": "0622364658"
+    }
+  ]
+}

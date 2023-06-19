@@ -1,0 +1,48 @@
+<h1>Orodha ya Walimu wa Markaz Tahfidh Quran Zanzibar</h1>
+
+<div class="container custom-container-2">
+    <button class="btn btn-outline-primary" routerLink="app-mwalimu-create" (click)="Opendialog()">
+      Add mwalimu
+    </button>
+      <!-- Show it when there is no mwalimu -->
+      <div class="no-data text-center" *ngIf="mwalimu.length == 0">
+        <p>There is no mwalimu added yet!</p>
+        <button class="btn btn-outline-primary" routerLink="app-walimu-create" (click)="Opendialog()">
+          Add mwalimu
+        </button>
+      </div>
+      <!-- mwalimus list table, it hides when there is no mwalimu -->
+      <div *ngIf="mwalimu.length !== 0">
+        <h3 class="mb-3 text-center">Orodha ya walimu</h3>
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">User Id</th>
+                <th scope="col">Jina</th>
+                <th scope="col">Madrassa</th>
+                <th scope="col">Anaposhi</th>
+                <th scope="col">Namba ya simu</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let mwalimu of mwalimu">
+                <td>{{ mwalimu.id }}</td>
+                <td>{{ mwalimu.fname }}</td>
+                <td>{{ mwalimu.madrassa}}</td>
+                <td>{{ mwalimu.address }}</td>
+                <td>{{ mwalimu.phoneNo}}</td>
+                <td>
+                  <span class="edit" routerLink="/mwalimu-edit/{{ mwalimu.id }}"
+                    ><mat-icon>edit</mat-icon></span>
+                  <span class="delete" (click)="deletemwalimu(mwalimu.id)"
+                    ><mat-icon>delete</mat-icon></span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>

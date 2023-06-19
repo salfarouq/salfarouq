@@ -1,0 +1,21 @@
+<p>walimu-create works!</p>
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3 class="mb-3 text-center">Weka taarifa za walimu</h3>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="mwalimuDetails.fname" class="form-control" placeholder="Jina kamili la mwanafuzi">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="mwalimuDetails.madrassa" class="form-control" placeholder="Jina la chuo anachosoma">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="mwalimuDetails.address" class="form-control" placeholder="Pahala anapoishi">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="mwalimuDetails.phoneNo" class="form-control" placeholder="Namba ya simu ya mzazi">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="addmwalimu(mwalimuDetails)">Taarifa za mwalimu</button>
+      </div>
+    </div>
+  </div>

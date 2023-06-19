@@ -1,0 +1,25 @@
+{
+  "wanfunzi": [
+    {
+      "id": 1,
+      "Fname": "Omar Abdalla Ally",
+      "Madrassa": "Almadrasatul-Swaabirina",
+      "phoneNo": "07745374758",
+      "address": "Magogoni"
+    },
+    {
+      "id": 2,
+      "Fname": "Ahmad Rashid Ahmad",
+      "Madrassa": "Almadrasatul-Nurulhudaa",
+      "phoneNo": "07744457658",
+      "address": "Magogoni mkarafuuni"
+    },
+    {
+      "id": 3,
+      "Fname": "Amal Abdi Abdalla",
+      "Madrassa": "Almadrasatul-NurulYaqiin",
+      "phoneNo": "076767678",
+      "address": "Amani"
+    }
+  ]
+}

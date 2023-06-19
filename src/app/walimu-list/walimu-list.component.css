@@ -1,0 +1,14 @@
+h1{
+    text-align:center;
+    color:green;
+    text-transform: capitalize;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding:20px;
+}
+div{
+    padding:5px;
+}
+mat-icon{
+    color:red;
+}
