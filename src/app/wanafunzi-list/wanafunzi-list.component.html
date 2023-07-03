@@ -1,9 +1,10 @@
 
-<div>
-  <img sizes="345px" classs="mylogo" alt="logo">
-</div>
+
+<br>
 <div class="container custom-container-2">
-  <button class="btn btn-outline-primary" routerLink="app-mwanafunzi-create" (click)="Opendialog()">
+  <button class="btn btn-outline-primary" 
+    routerLink="app-mwanafunzi-create"
+    (click)="Opendialog()">
     Add mwanafunzi
   </button>
     <!-- Show it when there is no mwanafunzi -->
@@ -36,7 +37,7 @@
               <td>{{ mwanafunzi.address }}</td>
               <td>{{ mwanafunzi.phoneNo}}</td>
               <td>
-                <span class="edit" routerLink="/mwanafunzi-edit/{{ mwanafunzi.id }}"
+                <span class="edit" routerLink="/wanafunzi-edit/id"
                   (click)="Opendialog1()"><mat-icon>edit</mat-icon></span>
                 <span class="delete" (click)="deletemwanafunzi(mwanafunzi.id)">
                   <mat-icon>delete</mat-icon></span>

@@ -1,6 +1,7 @@
 mat-toolbar-row{
     background-color: blue;
     color:white;
+    float:right;
 }
 mat-sidenav-container{
     height:calc(205vh - 115vh);
@@ -9,7 +10,28 @@ mat-sidenav{
     width:200px;
     background-color:lightblue;
 }
+.heer{
+    display:inline-block;
+    display:flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+span>h1{
+    margin-top:100px;
+    font-family:serif;
+    font-size:34px;
+    font-weight:bolder;
+    text-align:center;
+    color:green;
+    padding-left:23px;
+   
 
+}
+.pic{
+    float:left;
+    max-height:10em;
+    width:15em;
+}
 mat-sidenav button a{
     display:block;
     text-decoration:none;

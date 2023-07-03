@@ -7,7 +7,7 @@ import { WanafunziCreateComponent } from './wanafunzi-create/wanafunzi-create.co
 import { WanafunziEditComponent } from './wanafunzi-edit/wanafunzi-edit.component';
 import { WanafunziListComponent } from './wanafunzi-list/wanafunzi-list.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, FormControl } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -18,6 +18,12 @@ import {MatListModule} from '@angular/material/list';
 import { WalimuCreateComponent } from './walimu-create/walimu-create.component';
 import { WalimuListComponent } from './walimu-list/walimu-list.component';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home/home.component';
+import { WalimuEditComponent } from './walimu-edit/walimu-edit.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import {MatCardModule} from '@angular/material/card';
+import { StudentvComponent } from './viewer/studentv/studentv.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +32,14 @@ import { CommonModule } from '@angular/common';
     WanafunziEditComponent,
     WanafunziListComponent,
     WalimuCreateComponent,
-    WalimuListComponent, 
-  
-   
+    WalimuListComponent,
+    HomeComponent,
+    WalimuEditComponent,
+    RegisterComponent,
+    LoginComponent,
+    StudentvComponent,
+ 
+
   ],
   imports: [
     BrowserModule,
@@ -43,6 +54,8 @@ import { CommonModule } from '@angular/common';
     MatDialogModule,
     MatSidenavModule,
     ReactiveFormsModule,
+    MatCardModule,
+  
   
   ],
   providers: [],

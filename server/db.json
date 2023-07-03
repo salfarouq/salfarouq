@@ -41,22 +41,15 @@
       "address": "Jitimai",
       "phoneNo": "078987643",
       "id": 6
-    },
-    {
-      "fname": "Halima Ibrahim Yussuf",
-      "madrassa": "Almadrasatul Swabirina A",
-      "address": "Magogoni",
-      "phoneNo": "0879654345",
-      "id": 7
     }
   ],
   "walimu": [
     {
       "id": 1,
       "fname": "Abubakar Masoud Ghulam",
-      "madrassa": "Almadrasatul Swaabirina",
-      "address": "Magogoni",
-      "phoneNo": "0773786532"
+      "madrassa": "Almadrasatul Swaabirina A",
+      "address": "Amani",
+      "phoneNo": "0773457832"
     },
     {
       "id": 2,
@@ -73,11 +66,10 @@
       "phoneNo": "0773456889"
     },
     {
-      "id": 4,
-      "fname": "Khalid Hassan Rashid",
-      "madrassa": "Almadrasatul Qamaria",
-      "address": "Daraja Bovu",
-      "phoneNo": "0622364658"
+      "id": 4
+    },
+    {
+      "id": 5
     }
   ]
 }

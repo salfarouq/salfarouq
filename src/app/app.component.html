@@ -3,16 +3,17 @@
         <button mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
         <button mat-button>
             <mat-icon>home</mat-icon>
-            <a router-link="Home">Home</a>
+            <a router-link="home">Home</a>
         </button>
+            MARKAZ TAHFIDH QURAN
     </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
     <mat-sidenav [(opened)]="opened" mode="push">
-       Menu
+        <span><img src="./assets/jumuiya.png" class="pic" alt="picture"></span>
     <mat-list>
         <mat-list-item>
-            <a routerLink="Dashboard"><mat-icon>home</mat-icon>Home</a>
+            <a routerLink="home"><mat-icon>home</mat-icon>Home</a>
         </mat-list-item>
     </mat-list>  
     <mat-list>
@@ -27,7 +28,10 @@
      </mat-list>
      </mat-sidenav>
     <mat-sidenav-content>
-        
+        <div class="heer">
+            <span><img src="./assets/jumuiya.png" class="pic" alt="picture"></span>
+            <span><h1>جمعية تحفيظ القران بزنجبار</h1></span>
+        </div>
            <router-outlet></router-outlet>
     </mat-sidenav-content>
         

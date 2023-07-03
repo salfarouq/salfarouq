@@ -1,5 +1,5 @@
 <h1>Orodha ya Walimu wa Markaz Tahfidh Quran Zanzibar</h1>
-
+<h2>Idadi ya walimu wa  markaz kwa sasa ni {{mwalimu.length}}</h2>
 <div class="container custom-container-2">
     <button class="btn btn-outline-primary" routerLink="app-mwalimu-create" (click)="Opendialog()">
       Add mwalimu
@@ -34,8 +34,9 @@
                 <td>{{ mwalimu.address }}</td>
                 <td>{{ mwalimu.phoneNo}}</td>
                 <td>
-                  <span class="edit" routerLink="/mwalimu-edit/{{ mwalimu.id }}"
-                    ><mat-icon>edit</mat-icon></span>
+                  <span class="edit"
+                    routerLink="/mwalimu-edit/{{ mwalimu.id }}"
+                    (click)="Opendialog1()"><mat-icon>edit</mat-icon></span>
                   <span class="delete" (click)="deletemwalimu(mwalimu.id)"
                     ><mat-icon>delete</mat-icon></span
                   >

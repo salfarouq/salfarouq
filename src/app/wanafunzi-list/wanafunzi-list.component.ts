@@ -3,6 +3,7 @@ import { RestApiService } from '../shared/rest-api.service';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { WanafunziCreateComponent } from '../wanafunzi-create/wanafunzi-create.component';
 import { WanafunziEditComponent } from '../wanafunzi-edit/wanafunzi-edit.component';
+import { WalimuListComponent } from '../walimu-list/walimu-list.component';
 
 
 
@@ -11,7 +12,7 @@ import { WanafunziEditComponent } from '../wanafunzi-edit/wanafunzi-edit.compone
   templateUrl: './wanafunzi-list.component.html',
   styleUrls: ['./wanafunzi-list.component.css']
 })
-export class WanafunziListComponent {
+export class WanafunziListComponent{
   mwanafunzi: any = [];
   constructor(public restApi: RestApiService,public dialog:MatDialog) {}
   Opendialog(){
@@ -26,6 +27,7 @@ export class WanafunziListComponent {
       width: '600px',
     });
   }
+  
   ngOnInit() {
     this.loadmwanafunzis();
     
@@ -43,7 +45,11 @@ export class WanafunziListComponent {
       this.restApi.deletemwanafunzi(id).subscribe((data) => {
         this.loadmwanafunzis();
       }); 
+    }
   }
-  }
+  
+
 }
+
+
 

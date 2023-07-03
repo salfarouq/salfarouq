@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Walimu } from './walimu';
-import { Observable, catchError, retry, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Walimu } from './walimu';
 
 @Injectable({
   providedIn: 'root'
@@ -27,11 +29,15 @@ export class RestApi2Service {
         .pipe(retry(1), catchError(this.handleError));
     }
     // HttpClient API get() method => Fetch mwalimu
-    getmwalimu(id:any):Observable<Walimu> {
-      return this.http
-        .get<Walimu>(this.apiURL + '/walimu/' + id)
-        .pipe(retry(1), catchError(this.handleError));
+    getMwalimu(id: number): Observable<any> {
+      return this.http.get<any>(`${this.apiURL}/${id}`).pipe(
+        catchError((error: any) => {
+          this.handleError(error);
+          return throwError(error);
+        })
+      );
     }
+    
     // HttpClient API post() method => Create mwalimu
     createmwalimu(walimu: any): Observable<Walimu> {
       return this.http
@@ -43,15 +49,15 @@ export class RestApi2Service {
         .pipe(retry(1), catchError(this.handleError));
     }
     // HttpClient API put() method => Update mwalimu
-    updatemwalimu(id: any, walimu: any): Observable<Walimu> {
-      return this.http
-        .put<Walimu>(
-          this.apiURL + '/walimu/' + id,
-          JSON.stringify(walimu),
-          this.httpOptions
-        )
-        .pipe(retry(1), catchError(this.handleError));
+    updateMwalimu(id: number, walimu: any): Observable<Walimu> {
+      return this.http.put<Walimu>(`${this.apiURL + '/walimu-edit/' }/${id}`, walimu).pipe(
+        catchError((error: any) => {
+          this.handleError(error);
+          return throwError(error);
+        })
+      );
     }
+    
     // HttpClient API delete() method => Delete mwalimu
     deletemwalimu(id: any) {
       return this.http
@@ -69,9 +75,8 @@ export class RestApi2Service {
         errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
       }
       window.alert(errorMessage);
-      return throwError(() => {
-        return errorMessage;
-      });
+      return throwError(errorMessage);
     }
+    
 }
 

@@ -1,0 +1,62 @@
+.card>span{
+    height:0.2em;
+    width:15em;
+    background-color:blue;
+}
+span{
+    height:0.5em;
+    width:50em;
+    background-color:white;
+}
+.cirle{
+    border-radius: 50%;
+    width:5em;
+    height:5em;
+    background-color: blue;
+    border-style: dotted;
+    border-color: white;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:12px;
+    margin-bottom:5px
+}
+h1{
+    font-size:34px;
+    font-weight:bold;
+    color:green;
+    text-align:center;
+    padding:20px;
+}
+.container{
+    display:flex;
+    flex-flow: row;
+}
+
+.card{
+    max-height:10em;
+    max-width:30em;
+    box-shadow: inset;
+    padding:5px;
+    margin:10px;
+    background-color: seagreen;
+}
+.container2{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+img{
+    width:28em;
+   height:20em;
+   padding-bottom: 20px;
+}
+mat-card{
+    width:34em;
+    height:30em;
+    margin:10px;
+    padding:20px;
+}
+mat-card>mat-card-header{
+    font-weight:bold;
+    float: center;
+}

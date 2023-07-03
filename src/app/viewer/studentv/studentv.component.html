@@ -1,0 +1,29 @@
+<p>studentv works!</p>
+{{mwanafunzi.length}}
+<h2>{{mwalimu.length}}</h2>
+<div *ngIf="mwalimu.length !== 0">
+    <h3 class="mb-3 text-center">Orodha ya walimu</h3>
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">Jina</th>
+            <th scope="col">Madrassa</th>
+            <th scope="col">Anaposhi</th>
+            <th scope="col">Namba ya simu</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mwalimu of mwalimu">
+            <td>{{ mwalimu.id }}</td>
+            <td>{{ mwalimu.fname }}</td>
+            <td>{{ mwalimu.madrassa}}</td>
+            <td>{{ mwalimu.address }}</td>
+            <td>{{ mwalimu.phoneNo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

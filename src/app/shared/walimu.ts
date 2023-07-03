@@ -1,4 +1,4 @@
-export class Walimu{
+export interface Walimu{
     id?:number;
     fname?:string;
     madrassa?:string;

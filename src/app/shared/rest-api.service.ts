@@ -4,7 +4,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+
 import { Wanafunzi } from './wanafunzi';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -45,11 +47,11 @@ export class RestApiService {
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API put() method => Update mwanafunzi
-  updatemwanafunzi(id: any, Wanafunzi: any): Observable<Wanafunzi> {
+  updatemwanafunzi(id: any, wanafunzi: any): Observable<Wanafunzi> {
     return this.http
       .put<Wanafunzi>(
         this.apiURL + '/wanfunzi/' + id,
-        JSON.stringify(Wanafunzi),
+        JSON.stringify(wanafunzi),
         this.httpOptions
       )
       .pipe(retry(1), catchError(this.handleError));
@@ -71,8 +73,6 @@ export class RestApiService {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     window.alert(errorMessage);
-    return throwError(() => {
-      return errorMessage;
-    });
+    return throwError(errorMessage);
   }
 }
